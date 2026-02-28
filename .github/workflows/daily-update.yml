@@ -2,8 +2,11 @@ name: DevSync Daily Update
 
 on:
   schedule:
-    - cron: '23 6 * * *'   # Runs daily at 06:23 UTC (specific time)
+    - cron: '23 6 * * *'
   workflow_dispatch:
+
+permissions:
+  contents: write   # REQUIRED for git push
 
 jobs:
   auto-commit:
